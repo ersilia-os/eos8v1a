@@ -1,1 +1,8 @@
 name,type,direction,description
+consensus_score,float,high,Tanh-transformed quality-weighted consensus probability across the 6 sub-models. Recommended threshold: 0.874.
+merged_ic50_decoys,float,high,Probability from sub-model trained on IC50 measurements merged across 11 ChEMBL assays (cutoff 10 uM; n=1360 incl. decoys). Recommended threshold: 0.861.
+merged_activity_decoys,float,high,Probability from sub-model trained on single-point % activity measurements merged across 12 ChEMBL assays (cutoff 50 %; n=1280 incl. decoys). Recommended threshold: 0.833.
+general_activity_decoys,float,high,Probability from sub-model trained on single-point % activity measurements aggregated across 256 ChEMBL assays (cutoff 50 %; n=2500 incl. decoys). Recommended threshold: 0.826.
+general_ic50_decoys,float,high,Probability from sub-model trained on IC50 measurements aggregated across 46 ChEMBL assays (cutoff 10 uM; n=2080 incl. decoys). Recommended threshold: 0.856.
+general_inhibition,float,high,Probability from sub-model trained on inhibition % measurements aggregated across 33 ChEMBL assays (cutoff 50 %; n=703). Recommended threshold: 0.655.
+general_ec50,float,high,Probability from sub-model trained on EC50 measurements aggregated across 38 ChEMBL assays (cutoff 10 uM; n=365). Recommended threshold: 0.487.
