@@ -2,8 +2,7 @@
 
 Bioactivity prediction of activity against Schistosoma mansoni, trained as binary (active/inactive) classifiers from publicly available data in ChEMBL. Independent models are trained on multiple bioactivity datasets, corresponding to single-point (percent inhibition) assays, among others. A ranking score is provided for each model alongside a combined consensus score.
 
-This model was incorporated on 2026-05-19.
-
+This model was incorporated on 2026-05-19.Last packaged on 2026-05-21.
 
 ## Information
 ### Identifiers
@@ -41,12 +40,19 @@ Below are the **Output Columns** of the model:
 ### Source and Deployment
 - **Source:** `Local`
 - **Source Type:** `Internal`
+- **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos8v1a](https://hub.docker.com/r/ersiliaos/eos8v1a)
+- **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8v1a.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8v1a.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `59`
 - **Environment Size (Mb):** `1888`
+- **Image Size (Mb):** `2119.84`
 
+**Computational Performance (seconds):**
+- 10 inputs: `37.87`
+- 100 inputs: `27.99`
+- 10000 inputs: `601.83`
 
 ### References
 - **Source Code**: [https://github.com/ersilia-os/chembl-antimicrobial-models](https://github.com/ersilia-os/chembl-antimicrobial-models)
