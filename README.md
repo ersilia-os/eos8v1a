@@ -2,6 +2,7 @@
 
 Bioactivity prediction of activity against Schistosoma mansoni, trained as binary (active/inactive) classifiers from publicly available data in ChEMBL. Independent models are trained on multiple bioactivity datasets, corresponding to single-point (percent inhibition) assays, among others. A ranking score is provided for each model alongside a combined consensus score.
 
+This model was incorporated on 2026-05-19.
 
 
 ## Information
@@ -40,8 +41,11 @@ Below are the **Output Columns** of the model:
 ### Source and Deployment
 - **Source:** `Local`
 - **Source Type:** `Internal`
+- **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8v1a.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8v1a.zip)
 
 ### Resource Consumption
+- **Model Size (Mb):** `59`
+- **Environment Size (Mb):** `1888`
 
 
 ### References
