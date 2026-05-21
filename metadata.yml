@@ -1,9 +1,13 @@
 Identifier: eos8v1a
 Slug: antimicrobial-activity-smansoni
 Status: In progress
-Title: Antimicrobial activity prediction against Schistosoma mansoni from public ChEMBL data
-Description: >
-  Bioactivity prediction of activity against Schistosoma mansoni, trained as binary (active/inactive) classifiers from publicly available data in ChEMBL. Independent models are trained on multiple bioactivity datasets, corresponding to single-point (percent inhibition) assays, among others. A ranking score is provided for each model alongside a combined consensus score.
+Title: Antimicrobial activity prediction against Schistosoma mansoni from public
+  ChEMBL data
+Description: Bioactivity prediction of activity against Schistosoma mansoni, 
+  trained as binary (active/inactive) classifiers from publicly available data 
+  in ChEMBL. Independent models are trained on multiple bioactivity datasets, 
+  corresponding to single-point (percent inhibition) assays, among others. A 
+  ranking score is provided for each model alongside a combined consensus score.
 Deployment:
   - Local
   - Online
@@ -18,7 +22,9 @@ Output:
   - Score
 Output Dimension: 7
 Output Consistency: Fixed
-Interpretation: Probability of antimicrobial activity against Schistosoma mansoni from 6 ChEMBL-trained sub-models, plus a quality-weighted consensus score.
+Interpretation: Probability of antimicrobial activity against Schistosoma 
+  mansoni from 6 ChEMBL-trained sub-models, plus a quality-weighted consensus 
+  score.
 Tag:
   - Helminth
   - Antimicrobial activity
@@ -33,3 +39,4 @@ Publication: https://github.com/ersilia-os/chembl-antimicrobial-models
 Source Code: https://github.com/ersilia-os/chembl-antimicrobial-models
 License: GPL-3.0-or-later
 Contributor: arnaucoma24
+Incorporation Date: '2026-05-19'
