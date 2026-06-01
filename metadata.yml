@@ -21,7 +21,9 @@ Output:
   - Score
 Output Dimension: 9
 Output Consistency: Fixed
-Interpretation: Probability of antimicrobial activity against Schistosoma mansoni from 8 ChEMBL-trained sub-models, plus a quality-weighted consensus score.
+Interpretation: Probability of antimicrobial activity against Schistosoma 
+  mansoni from 8 ChEMBL-trained sub-models, plus a quality-weighted consensus 
+  score.
 Tag:
   - Helminth
   - Antimicrobial activity
