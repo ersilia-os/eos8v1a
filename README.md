@@ -1,7 +1,3 @@
-This model has been financed by Project PID2023-148309OA-I00 funded by MICIU/AEI/10.13039/501100011033 and by ERDF, EU.
-
-<img src="https://raw.githubusercontent.com/ersilia-os/ersilia/master/assets/miciu_cofinanciado.jpg" width="300">
-
 # Antimicrobial activity prediction against Schistosoma mansoni from public ChEMBL data
 
 Bioactivity prediction of activity against Schistosoma mansoni, trained as binary (active/inactive) classifiers from publicly available data in ChEMBL. Independent models are trained on multiple bioactivity datasets, corresponding to single-point (percent inhibition) assays, among others. A ranking score is provided for each model alongside a combined consensus score.
@@ -25,20 +21,22 @@ This model was incorporated on 2026-05-19.Last packaged on 2026-05-21.
 - **Input Dimension:** `1`
 
 ### Output
-- **Output Dimension:** `7`
+- **Output Dimension:** `9`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Probability of antimicrobial activity against Schistosoma mansoni from 6 ChEMBL-trained sub-models, plus a quality-weighted consensus score.
+- **Interpretation:** Probability of antimicrobial activity against Schistosoma mansoni from 8 ChEMBL-trained sub-models, plus a quality-weighted consensus score.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
 |------|------|-----------|-------------|
-| consensus_score | float | high | Tanh-transformed quality-weighted consensus probability across the 6 sub-models. Recommended threshold: 0.874. |
-| merged_ic50_decoys | float | high | Probability from sub-model trained on IC50 measurements merged across 11 ChEMBL assays (cutoff 10 uM; n=1360 incl. decoys). Recommended threshold: 0.861. |
-| merged_activity_decoys | float | high | Probability from sub-model trained on single-point % activity measurements merged across 12 ChEMBL assays (cutoff 50 %; n=1280 incl. decoys). Recommended threshold: 0.833. |
-| general_activity_decoys | float | high | Probability from sub-model trained on single-point % activity measurements aggregated across 256 ChEMBL assays (cutoff 50 %; n=2500 incl. decoys). Recommended threshold: 0.826. |
-| general_ic50_decoys | float | high | Probability from sub-model trained on IC50 measurements aggregated across 46 ChEMBL assays (cutoff 10 uM; n=2080 incl. decoys). Recommended threshold: 0.856. |
-| general_inhibition | float | high | Probability from sub-model trained on inhibition % measurements aggregated across 33 ChEMBL assays (cutoff 50 %; n=703). Recommended threshold: 0.655. |
-| general_ec50 | float | high | Probability from sub-model trained on EC50 measurements aggregated across 38 ChEMBL assays (cutoff 10 uM; n=365). Recommended threshold: 0.487. |
+| consensus_score | float | high | Tanh-transformed quality-weighted consensus probability across the 8 sub-models. Recommended threshold: 0.871. |
+| merged_ic50_decoys | float | high | Probability from sub-model trained on IC50 measurements merged across 11 ChEMBL assays (cutoff 10 uM; n=1360 incl. decoys). Recommended threshold: 0.857. |
+| merged_activity_decoys | float | high | Probability from sub-model trained on single-point % activity merged across 12 ChEMBL assays (cutoff 50%; n=1280 incl. decoys). Recommended threshold: 0.844. |
+| general_dose_response_decoys | float | high | Probability from sub-model trained on dose-response measurements aggregated across 3 ChEMBL assays (n=3780). Recommended threshold: 0.85. |
+| general_activity_decoys | float | high | Probability from sub-model trained on single-point % activity aggregated across 256 ChEMBL assays (cutoff 50%; n=2500 incl. decoys). Recommended threshold: 0.836. |
+| general_ic50_decoys | float | high | Probability from sub-model trained on IC50 measurements aggregated across 46 ChEMBL assays (cutoff 10 uM; n=2080 incl. decoys). Recommended threshold: 0.834. |
+| general_single_point | float | high | Probability from sub-model trained on single-point activity measurements aggregated across 3 ChEMBL assays (n=1760). Recommended threshold: 0.681. |
+| general_inhibition | float | high | Probability from sub-model trained on inhibition % aggregated across 33 ChEMBL assays (cutoff 50%; n=703). Recommended threshold: 0.671. |
+| general_ec50 | float | high | Probability from sub-model trained on EC50 measurements aggregated across 38 ChEMBL assays (cutoff 10 uM; n=365). Recommended threshold: 0.473. |
 
 
 ### Source and Deployment
