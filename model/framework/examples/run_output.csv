@@ -1,4 +1,4 @@
-consensus_score,merged_ic50_decoys,merged_activity_decoys,general_dose_response_decoys,general_activity_decoys,general_ic50_decoys,general_single_point,general_inhibition,general_ec50
-0.5885,0.4126,0.4756,0.3163,0.933,0.2344,0.8775,0.4611,0.4983
-0.8848,0.8233,0.4436,0.9757,0.8456,0.9601,0.6363,0.8957,0.6076
-0.8039,0.653,0.6922,0.8861,0.6778,0.9647,0.6461,0.3624,0.5568
+consensus_score,chembl_single_point_0,chembl_single_point_1,chembl_single_point_2,chembl_dose_response_0
+0.6997,0.8112,0.5597,0.561,0.4828
+0.8389,0.9021,0.5303,0.7984,0.6274
+0.5453,0.6671,0.4459,0.5632,0.3978
