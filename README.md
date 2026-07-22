@@ -2,7 +2,7 @@
 
 Bioactivity prediction of growth inhibition in Schistosoma mansoni, trained as binary (active/inactive) classifiers from publicly available data in ChEMBL. Independent models are trained on multiple bioactivity datasets, corresponding to single-point (Inhibition) and dose-response (IC50) assays, among others. A ranking score is provided for each model alongside a combined consensus score.
 
-This model was incorporated on 2026-05-19.Last packaged on 2026-06-02.
+This model was incorporated on 2026-05-19.Last packaged on 2026-07-22.
 
 ## Information
 ### Identifiers
@@ -45,12 +45,12 @@ Below are the **Output Columns** of the model:
 ### Resource Consumption
 - **Model Size (Mb):** `64`
 - **Environment Size (Mb):** `7208`
-- **Image Size (Mb):** `2142.49`
+- **Image Size (Mb):** `7262.28`
 
 **Computational Performance (seconds):**
-- 10 inputs: `41.57`
-- 100 inputs: `36.97`
-- 10000 inputs: `837.93`
+- 10 inputs: `51.7`
+- 100 inputs: `46.5`
+- 10000 inputs: `1017.24`
 
 ### References
 - **Source Code**: [https://github.com/ersilia-os/chembl-antimicrobial-models](https://github.com/ersilia-os/chembl-antimicrobial-models)
