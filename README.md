@@ -1,6 +1,6 @@
 # Antimicrobial activity prediction against Schistosoma mansoni from public ChEMBL data
 
-Bioactivity prediction of growth inhibition in Schistosoma mansoni, trained as binary (active/inactive) classifiers from publicly available data in ChEMBL. Independent models are trained on multiple bioactivity datasets, corresponding to single-point (Inhibition) and dose-response (IC50) assays, among others. A ranking score is provided for each model alongside a combined consensus score.
+Scores compounds against Schistosoma mansoni, a parasitic flatworm infecting hundreds of millions of people and treated almost entirely with a single drug, praziquantel. Four classifiers were built from the ChEMBL bioactivity pools with enough data to support them, then combined into a quality-weighted consensus. Helminths are multicellular animals rather than microbes, so activity depends on tissue penetration in ways that bacterial screening intuition does not transfer to.
 
 This model was incorporated on 2026-05-19.Last packaged on 2026-07-22.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2026-05-19.Last packaged on 2026-07-22.
 ### Output
 - **Output Dimension:** `5`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Probability of antimicrobial activity against Schistosoma mansoni from 4 ChEMBL-trained sub-models, plus a quality-weighted consensus score.
+- **Interpretation:** Probability of Schistosoma mansoni activity across four sub-models, plus a weighted consensus.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
