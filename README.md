@@ -1,6 +1,6 @@
 # Antimicrobial activity prediction against Schistosoma mansoni from public ChEMBL data
 
-Scores compounds against Schistosoma mansoni, a parasitic flatworm infecting hundreds of millions of people and treated almost entirely with a single drug, praziquantel. Four classifiers were built from the ChEMBL bioactivity pools with enough data to support them, then combined into a quality-weighted consensus. Helminths are multicellular animals rather than microbes, so activity depends on tissue penetration in ways that bacterial screening intuition does not transfer to.
+Bioactivity prediction of growth inhibition in Schistosoma mansoni, trained as binary (active/inactive) classifiers from publicly available data in ChEMBL. Independent models are trained on multiple bioactivity datasets, corresponding to single-point (Inhibition) and dose-response (IC50) assays, among others. A ranking score is provided for each model alongside a combined consensus score.
 
 This model was incorporated on 2026-05-19.Last packaged on 2026-07-22.
 
@@ -23,16 +23,16 @@ This model was incorporated on 2026-05-19.Last packaged on 2026-07-22.
 ### Output
 - **Output Dimension:** `5`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Probability of Schistosoma mansoni activity across four sub-models, plus a weighted consensus.
+- **Interpretation:** Probability of antimicrobial activity against Schistosoma mansoni from 4 ChEMBL-trained sub-models, plus a quality-weighted consensus score.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
 |------|------|-----------|-------------|
-| consensus_score | float | high | Tanh-transformed quality-weighted consensus probability across the 4 sub-models. Recommended threshold: 0.85. |
-| chembl_single_point_0 | float | high | Probability from sub-model trained on ChEMBL single-point signal-based pool of 10 assays (775 compounds). Recommended threshold: 0.846. |
-| chembl_single_point_1 | float | high | Probability from sub-model trained on ChEMBL single-point signal-based pool of 9 assays (449 compounds). Recommended threshold: 0.909. |
-| chembl_single_point_2 | float | high | Probability from sub-model trained on ChEMBL single-point signal-based pool of 8 assays (329 compounds). Recommended threshold: 0.6. |
-| chembl_dose_response_0 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 16 assays (528 compounds; incl. 103 added negatives). Recommended threshold: 0.54. |
+| consensus_score | float | high | Quality-weighted consensus across the 4 sub-models on the same rank scale as the sub-models. Calibrated against a reference library of 50K drug-like molecules so that a score of 0.65 is better than 99% of them. Recommended threshold: 0.65. |
+| chembl_single_point_0 | float | high | Probability from sub-model trained on ChEMBL single-point signal-based pool of 10 assays (775 compounds). Recommended threshold: 0.65. |
+| chembl_single_point_1 | float | high | Probability from sub-model trained on ChEMBL single-point signal-based pool of 9 assays (449 compounds). Recommended threshold: 0.65. |
+| chembl_single_point_2 | float | high | Probability from sub-model trained on ChEMBL single-point signal-based pool of 8 assays (329 compounds). Recommended threshold: 0.65. |
+| chembl_dose_response_0 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 16 assays (528 compounds; incl. 103 added negatives). Recommended threshold: 0.65. |
 
 
 ### Source and Deployment
