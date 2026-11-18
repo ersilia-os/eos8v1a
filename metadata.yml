@@ -3,12 +3,7 @@ Slug: antimicrobial-activity-smansoni
 Status: Ready
 Title: Antimicrobial activity prediction against Schistosoma mansoni from public
   ChEMBL data
-Description: Bioactivity prediction of growth inhibition in Schistosoma mansoni,
-  trained as binary (active/inactive) classifiers from publicly available data 
-  in ChEMBL. Independent models are trained on multiple bioactivity datasets, 
-  corresponding to single-point (Inhibition) and dose-response (IC50) assays, 
-  among others. A ranking score is provided for each model alongside a combined 
-  consensus score.
+Description: Bioactivity prediction of growth inhibition in Schistosoma mansoni, trained as binary (active/inactive) classifiers from publicly available data in ChEMBL. Independent models are trained on multiple bioactivity datasets, corresponding to single-point (Inhibition) and dose-response (IC50) assays, among others. A ranking score is provided for each model alongside a combined consensus score.
 Deployment:
   - Local
 Source: Local
@@ -22,9 +17,7 @@ Output:
   - Score
 Output Dimension: 5
 Output Consistency: Fixed
-Interpretation: Probability of antimicrobial activity against Schistosoma 
-  mansoni from 4 ChEMBL-trained sub-models, plus a quality-weighted consensus 
-  score.
+Interpretation: Probability of antimicrobial activity against Schistosoma mansoni from 4 ChEMBL-trained sub-models, plus a quality-weighted consensus score.
 Tag:
   - Helminth
   - Antimicrobial activity
@@ -41,13 +34,12 @@ License: GPL-3.0-or-later
 Contributor: arnaucoma24
 Incorporation Date: '2026-05-19'
 Last Packaging Date: '2026-10-06'
-Release: v4.0.2
+Release: v4.0.1
 S3: https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8v1a.zip
 DockerHub: https://hub.docker.com/r/ersiliaos/eos8v1a
 Docker Architecture:
   - AMD64
   - ARM64
-Apptainer: https://models-sif.s3.eu-north-1.amazonaws.com/eos8v1a_v4.sif
 Model Size: 75.0
 Environment Size: 7982.0
 Image Size: 8045.34
