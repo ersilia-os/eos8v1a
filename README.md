@@ -2,7 +2,8 @@
 
 Bioactivity prediction of growth inhibition in Schistosoma mansoni, trained as binary (active/inactive) classifiers from publicly available data in ChEMBL. Independent models are trained on multiple bioactivity datasets, corresponding to single-point (Inhibition) and dose-response (IC50) assays, among others. A ranking score is provided for each model alongside a combined consensus score.
 
-This model was incorporated on 2026-05-19.Last packaged on 2026-10-06.
+This model was incorporated on 2026-05-19.
+Last packaged on 2026-10-06.
 
 ## Information
 ### Identifiers
@@ -41,6 +42,7 @@ Below are the **Output Columns** of the model:
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos8v1a](https://hub.docker.com/r/ersiliaos/eos8v1a)
 - **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8v1a.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8v1a.zip)
+- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos8v1a_v4.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos8v1a_v4.sif)
 
 ### Resource Consumption
 - **Model Size (Mb):** `75`
